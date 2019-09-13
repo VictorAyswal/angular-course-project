@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { CartRoutingModule } from './cart-routing.module';
 import { CartContainerComponent } from './cart-container/cart-container.component';
 import { CartItemComponent } from './component/cart-item/cart-item.component';
 import { CartFormComponent } from './component/cart-form/cart-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,9 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartFormComponent
   ],
   imports: [
-    CommonModule,
-    CartRoutingModule,
-    ReactiveFormsModule
+    SharedModule,
+    CartRoutingModule
   ]
 })
 export class CartModule { }
